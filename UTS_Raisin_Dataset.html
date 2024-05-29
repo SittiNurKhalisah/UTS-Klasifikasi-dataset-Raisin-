@@ -1,0 +1,2280 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UTS-Klasifikasi dataset “Raisin” &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'UTS_Raisin_Dataset';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="Markdown Files" href="markdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">UTS-Klasifikasi dataset “Raisin”</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUTS_Raisin_Dataset.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/UTS_Raisin_Dataset.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>UTS-Klasifikasi dataset “Raisin”</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UTS-Klasifikasi dataset “Raisin”</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data">MEMAHAMI DATA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-cara-memperoleh-data-bagaimana-data-didapat">1. Memahami cara memperoleh data (bagaimana data didapat)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data">2. Eksplorasi data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipe-data-pada-setiap-kolom">3. Tipe data pada setiap kolom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-kualitas-data">4. Identifikasi kualitas data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pemeriksaan-missing-values">a. Pemeriksaan Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-pemeriksaan-local-outlier-factor-lof">b. Pemeriksaan LOCAL OUTLIER FACTOR (LOF)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-local-outlier-factor-lof-menggunakan-excel">PERHITUNGAN MANUAL LOCAL OUTLIER FACTOR (LOF) MENGGUNAKAN EXCEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-local-outlier-factor-lof-menggunakan-python">PERHITUNGAN  LOCAL OUTLIER FACTOR (LOF) MENGGUNAKAN PYTHON</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">PREPROCESSING DATA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penghapusan-lof">1. Penghapusan LOF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memisah-antar-fitur-dan-class">2. Memisah antar fitur dan class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">3. Normalisasi Data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-data">MODELLING DATA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-naive-bayes">1. Perhitungan Naive bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-memecah-antara-data-testing-dan-data-training">a. Memecah antara data testing dan data training</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-convert-data-training-untuk-perhitungan-manual">b. Convert data training untuk perhitungan manual</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-memeriksa-hasil-prediksi-class-antara-data-asli-dan-data-testing">c. Memeriksa hasil prediksi class antara data asli dan data testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-menghitung-data-akurasi-dari-data-testing">d. Menghitung data akurasi dari data testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-naive-bayes-menggunakan-excel">PERHITUNGAN MANUAL NAIVE BAYES MENGGUNAKAN EXCEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-naive-bayes-menggunakan-python">PERHITUNGAN  NAIVE BAYES MENGGUNAKAN PYTHON</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>openpyxl
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: openpyxl in /usr/local/lib/python3.10/dist-packages (3.1.2)
+Requirement already satisfied: et-xmlfile in /usr/local/lib/python3.10/dist-packages (from openpyxl) (1.1.0)
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="uts-klasifikasi-dataset-raisin">
+<h1>UTS-Klasifikasi dataset “Raisin”<a class="headerlink" href="#uts-klasifikasi-dataset-raisin" title="Link to this heading">#</a></h1>
+<p>Project ini bertujuan untuk mengklasifikasikan kismis berdasarkan dari data “Raisin” yang diperoleh melalui pengambilan gambar buah anggur yang dikeringkan dari dua varietas yang berbeda, yaitu Kecimen dan Besni. Proses pengambilan gambar dilakukan dengan menggunakan sistem Computer Vision System (CVS). Ilkay CINAR, Murat KOKLU, dan Sakir TASDEMIR, yang merupakan bagian dari Faculty of Technology di Selcuk University, Konya, Turki, bertanggung jawab atas pengumpulan data ini.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="memahami-data">
+<h1>MEMAHAMI DATA<a class="headerlink" href="#memahami-data" title="Link to this heading">#</a></h1>
+<section id="memahami-cara-memperoleh-data-bagaimana-data-didapat">
+<h2>1. Memahami cara memperoleh data (bagaimana data didapat)<a class="headerlink" href="#memahami-cara-memperoleh-data-bagaimana-data-didapat" title="Link to this heading">#</a></h2>
+<p>Data “Raisin” diperoleh melalui pengambilan gambar buah anggur dari dua varietas yang berbeda, yaitu Kecimen dan Besni. Proses pengambilan gambar dilakukan dengan menggunakan sistem Computer Vision System (CVS). Ilkay CINAR, Murat KOKLU, dan Sakir TASDEMIR, yang merupakan bagian dari Faculty of Technology di Selcuk University, Konya, Turki, bertanggung jawab atas pengumpulan data ini.</p>
+<p>Proses pengambilan gambar dilakukan untuk mengumpulkan data visual tentang morfologi buah anggur dari kedua varietas tersebut. Setelah gambar-gambar ini diperoleh, dilakukan beberapa tahapan pra-pemrosesan untuk memastikan kualitas data yang diperoleh. Selanjutnya, dari gambar-gambar tersebut, 7 fitur morfologis ekstraksi untuk setiap buah anggur.</p>
+<p>Data ini memiliki nilai tambah karena memberikan informasi yang lebih rinci tentang morfologi buah anggur dari varietas Kecimen dan Besni, yang dapat digunakan dalam berbagai aplikasi, termasuk klasifikasi buah anggur menggunakan metode Machine Vision dan kecerdasan buatan (Artificial Intelligence).</p>
+<p>Dengan demikian, pengambilan data dilakukan melalui proses pengambilan gambar buah anggur menggunakan CVS oleh tim peneliti yang terkait dengan Selcuk University, dan proses selanjutnya melibatkan ekstraksi fitur morfologis dari gambar-gambar tersebut untuk analisis lebih lanjut.</p>
+<p>GAMBAR DIBAWAH ADALAH GAMBAR DARI KISMIS VARIAN BESNI</p>
+<img src="kecimen.jpg" width="" align="" /><p>GAMBAR DIBAWAH ADALAH GAMBAR DARI KISMIS VARIAN KECIMEN</p>
+<img src="BESNI.jpg" width="" align="" /><p>Jadi, data Raisin adalah data yang memuat data kismis yang memiliki 2 varietas, yaitu Kecimen dan Besni. Dataset ini memiliki 900 data dan memiliki 7 fitur. Dalam dataset ini, terdapat beberapa variabel yang memiliki peran yang berbeda dalam analisis:</p>
+<ul class="simple">
+<li><p>Area: Ini adalah fitur yang menyatakan jumlah piksel dalam batas-batas kismis. Variabel ini adalah integer dan tidak memiliki nilai yang hilang.</p></li>
+</ul>
+<ul class="simple">
+<li></li>
+</ul>
+<p>MajorAxisLength: Variabel ini adalah fitur kontinu yang mengukur lingkungan dengan menghitung jarak antara batas kismis dan piksel di sekitarnya. Tidak ada nilai yang hilang.</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>MinorAxisLength: Variabel ini adalah fitur kontinu yang memberikan panjang sumbu utama, yaitu garis terpanjang yang dapat digambar pada kismis. Tidak ada nilai yang hilang.</p>
+<ul class="simple">
+<li><p>Eccentricity: Ini adalah fitur kontinu yang memberikan panjang sumbu kecil, yaitu garis terpendek yang dapat digambar pada kismis. Tidak ada nilai yang hilang.</p></li>
+</ul>
+<ul class="simple">
+<li></li>
+</ul>
+<p>ConvexArea: Variabel ini adalah fitur integer yang memberikan ukuran eksentrisitas elips, yang memiliki momen yang sama dengan kismis. Tidak ada nilai yang hilang.</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Extent: Variabel ini adalah fitur kontinu yang memberikan jumlah piksel dari cangkang cembung terkecil dari wilayah yang dibentuk oleh kismis. Tidak ada nilai yang hilang.</p>
+<ul class="simple">
+<li><p>Perimeter: Variabel ini adalah fitur kontinu yang memberikan rasio wilayah yang dibentuk oleh kismis terhadap total piksel dalam kotak pembatas. Tidak ada nilai yang hilang.</p></li>
+</ul>
+<p>Class: Ini adalah variabel target yang kategorikal, menunjukkan varietas kismis, yaitu Kecimen dan Besni. Tidak ada nilai yang hilang(Tidak ada missing values</p>
+<p>MENAMPILKAN DATA</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Raisin_Dataset.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-2-f2e62c87f75e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Raisin_Dataset.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">    </span><span class="mi">910</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">911</span> 
+<span class="ne">--&gt; </span><span class="mi">912</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">913</span> 
+<span class="g g-Whitespace">    </span><span class="mi">914</span> 
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">575</span> 
+<span class="g g-Whitespace">    </span><span class="mi">576</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">577</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span> 
+<span class="g g-Whitespace">    </span><span class="mi">579</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1405</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1406</span>         <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1407</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1408</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1409</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1659</span>                 <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1660</span>                     <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1661</span>             <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1662</span>                 <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1663</span>                 <span class="n">mode</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>         <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span>             <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">859</span>             <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>                 <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>                 <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;Raisin_Dataset.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="eksplorasi-data">
+<h2>2. Eksplorasi data<a class="headerlink" href="#eksplorasi-data" title="Link to this heading">#</a></h2>
+<p>Eksplorasi data adalah tahap awal dalam analisis data yang bertujuan untuk memahami karakteristik, pola, dan sifat dasar dari dataset. Tujuan utama dari eksplorasi data adalah untuk mendapatkan wawasan yang berguna dari data yang tersedia sebelum melakukan analisis yang lebih mendalam atau membangun model.</p>
+<p>a. PERHITUNGAN MANUAL</p>
+<img src="MANUAL.png" width="" align="" /><p>b. PERHITUNGAN MENGGUNAKAN PYTHON</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Area</th>
+      <th>MajorAxisLength</th>
+      <th>MinorAxisLength</th>
+      <th>Eccentricity</th>
+      <th>ConvexArea</th>
+      <th>Extent</th>
+      <th>Perimeter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+      <td>900.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>87804.127778</td>
+      <td>430.929950</td>
+      <td>254.488133</td>
+      <td>0.781542</td>
+      <td>91186.090000</td>
+      <td>0.699508</td>
+      <td>1165.906636</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>39002.111390</td>
+      <td>116.035121</td>
+      <td>49.988902</td>
+      <td>0.090318</td>
+      <td>40769.290132</td>
+      <td>0.053468</td>
+      <td>273.764315</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>25387.000000</td>
+      <td>225.629541</td>
+      <td>143.710872</td>
+      <td>0.348730</td>
+      <td>26139.000000</td>
+      <td>0.379856</td>
+      <td>619.074000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>59348.000000</td>
+      <td>345.442898</td>
+      <td>219.111126</td>
+      <td>0.741766</td>
+      <td>61513.250000</td>
+      <td>0.670869</td>
+      <td>966.410750</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>78902.000000</td>
+      <td>407.803951</td>
+      <td>247.848409</td>
+      <td>0.798846</td>
+      <td>81651.000000</td>
+      <td>0.707367</td>
+      <td>1119.509000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>105028.250000</td>
+      <td>494.187014</td>
+      <td>279.888575</td>
+      <td>0.842571</td>
+      <td>108375.750000</td>
+      <td>0.734991</td>
+      <td>1308.389750</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>235047.000000</td>
+      <td>997.291941</td>
+      <td>492.275279</td>
+      <td>0.962124</td>
+      <td>278217.000000</td>
+      <td>0.835455</td>
+      <td>2697.753000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ol class="arabic simple">
+<li><p>Jumlah (Count): Ini menunjukkan berapa banyak entri data yang ada untuk setiap variabel. Dalam kasus ini, Anda memiliki 900 entri untuk setiap variabel.</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Rata-rata (Mean): Ini adalah nilai rata-rata dari seluruh data untuk setiap variabel. Rata-rata memberi Anda gambaran tentang nilai tengah dari distribusi data.</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Standar Deviasi (Standard Deviation): Standar deviasi mengukur seberapa jauh titik data tersebar dari rata-rata. Semakin tinggi nilai standar deviasi, semakin besar variasi dalam data.</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Minimum: Ini adalah nilai terkecil yang ada dalam dataset untuk setiap variabel. Ini memberi Anda gambaran tentang rentang nilai yang mungkin untuk setiap variabel.</p></li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p>Persentil ke-25 (Q1): Ini adalah nilai yang membagi 25% data terendah dari yang lainnya. Dalam konteks ini, 25% dari data memiliki nilai di bawah nilai ini.</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Persentil ke-50 (Median atau Q2): Median adalah nilai tengah dari dataset saat diurutkan dari yang terkecil hingga yang terbesar. Dalam hal ini, 50% dari data memiliki nilai di bawah median.</p></li>
+</ol>
+<ol class="arabic simple" start="7">
+<li><p>Persentil ke-75 (Q3): Ini adalah nilai yang membagi 75% data terendah dari yang lainnya. Dalam konteks ini, 75% dari data memiliki nilai di bawah nilai ini.</p></li>
+</ol>
+<ol class="arabic simple" start="8">
+<li><p>Maksimum: Ini adalah nilai terbesar yang ada dalam dataset untuk setiap variabel. Ini memberi Anda gambaran tentang rentang nilai yang mungkin untuk setiap variabel.</p></li>
+</ol>
+</section>
+<section id="tipe-data-pada-setiap-kolom">
+<h2>3. Tipe data pada setiap kolom<a class="headerlink" href="#tipe-data-pada-setiap-kolom" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p>Nama Kolom</p></th>
+<th class="head"><p>Nama Fitur</p></th>
+<th class="head"><p>Deskripsi</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Nilai</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Area</p></td>
+<td><p>Area</p></td>
+<td><p>Fitur yang menyatakan jumlah piksel dalam batas-batas kismis. Variabel ini adalah integer dan tidak memiliki nilai yang hilang.</p></td>
+<td><p>Integer</p></td>
+<td><p>Numerik</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>MajorAxisLength</p></td>
+<td><p>MajorAxisLength</p></td>
+<td><p>Fitur kontinu yang mengukur lingkungan dengan menghitung jarak antara batas kismis dan piksel di sekitarnya. Tidak ada nilai yang hilang.</p></td>
+<td><p>Real</p></td>
+<td><p>Numerik</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>MinorAxisLength</p></td>
+<td><p>MinorAxisLength</p></td>
+<td><p>Fitur kontinu yang memberikan panjang sumbu utama, yaitu garis terpanjang yang dapat digambar pada kismis. Tidak ada nilai yang hilang.</p></td>
+<td><p>Real</p></td>
+<td><p>Numerik</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Eccentricity</p></td>
+<td><p>Eccentricity</p></td>
+<td><p>Fitur kontinu yang memberikan panjang sumbu kecil, yaitu garis terpendek yang dapat digambar pada kismis. Tidak ada nilai yang hilang.</p></td>
+<td><p>Real</p></td>
+<td><p>Numerik</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>ConvexArea</p></td>
+<td><p>ConvexArea</p></td>
+<td><p>Fitur integer yang memberikan ukuran eksentrisitas elips, yang memiliki momen yang sama dengan kismis. Tidak ada nilai yang hilang.</p></td>
+<td><p>Integer</p></td>
+<td><p>Numerik</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Extent</p></td>
+<td><p>Extent</p></td>
+<td><p>Fitur kontinu yang memberikan jumlah piksel dari cangkang cembung terkecil dari wilayah yang dibentuk oleh kismis. Tidak ada nilai yang hilang.</p></td>
+<td><p>Real</p></td>
+<td><p>Numerik</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Perimeter</p></td>
+<td><p>Perimeter</p></td>
+<td><p>Fitur kontinu yang memberikan rasio wilayah yang dibentuk oleh kismis terhadap total piksel dalam kotak pembatas. Tidak ada nilai yang hilang.</p></td>
+<td><p>Real</p></td>
+<td><p>Numerik</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>-</p></td>
+<td><p>Class</p></td>
+<td><p>Kecimen and Besni raisin.</p></td>
+<td><p>Kategorikal</p></td>
+<td><p>Nominal</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="identifikasi-kualitas-data">
+<h2>4. Identifikasi kualitas data<a class="headerlink" href="#identifikasi-kualitas-data" title="Link to this heading">#</a></h2>
+<section id="a-pemeriksaan-missing-values">
+<h3>a. Pemeriksaan Missing Values<a class="headerlink" href="#a-pemeriksaan-missing-values" title="Link to this heading">#</a></h3>
+<p>Kode df.isnull() dalam pandas digunakan untuk memeriksa nilai yang hilang (missing values) dalam DataFrame df</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Area</th>
+      <th>MajorAxisLength</th>
+      <th>MinorAxisLength</th>
+      <th>Eccentricity</th>
+      <th>ConvexArea</th>
+      <th>Extent</th>
+      <th>Perimeter</th>
+      <th>Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>895</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>896</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>897</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>898</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>899</th>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<p>900 rows × 8 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="b-pemeriksaan-local-outlier-factor-lof">
+<h3>b. Pemeriksaan LOCAL OUTLIER FACTOR (LOF)<a class="headerlink" href="#b-pemeriksaan-local-outlier-factor-lof" title="Link to this heading">#</a></h3>
+<p>Deteksi Outlier adalah Suatu metode yang digunakan dalam analisis data untuk mengidentifikasi titik-titik data yang dianggap sebagai outlier atau anomali. Outlier adalah nilai yang secara signifikan berbeda dari sebagian besar data lainnya dalam sebuah dataset. Outlier dapat mengindikasikan kesalahan dalam pengumpulan data, variasi alami yang ekstrim, atau kejadian yang tidak biasa.</p>
+<p>Algoritme Local Outlier Factor (LOF) adalah metode deteksi anomali tanpa pengawasan yang menghitung deviasi kepadatan lokal dari titik data tertentu terhadap titik data tetangganya. Ini menganggap sampel yang memiliki kepadatan jauh lebih rendah daripada sampel tetangganya sebagai outlier.</p>
+<p>K-distance (dist_K) adalah jarak ke tetangga terdekat ke K. K-neighbors dilambahkan dengan Nk(A) mencakup himpunan titik yang terletak di dalam atau pada lingkaran berjari-jari jarak K. K-tetangga bisa lebih dari atau sama dengan nilai K.</p>
+</section>
+<section id="perhitungan-manual-local-outlier-factor-lof-menggunakan-excel">
+<h3>PERHITUNGAN MANUAL LOCAL OUTLIER FACTOR (LOF) MENGGUNAKAN EXCEL<a class="headerlink" href="#perhitungan-manual-local-outlier-factor-lof-menggunakan-excel" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Persiapkan Data</p></li>
+</ol>
+<p>contoh data yang diambil yaitu data dengan tipe numerik 7 fitur. menggunakan jumlah data 10 dan k=2, menghitung manual deteksi outlier menggunakan metode jarak Manhattan (Manhattan distance) dengan rumus:</p>
+<div class="math notranslate nohighlight">
+\[d(x,y) = \sqrt{\sum_{i=1}^{n}(x_i - y_i)}\]</div>
+<img src="image-20240529-215823.png" width="" align="" /><ol class="arabic simple" start="2">
+<li><p>Menghitung jarak dan menentukan K-NEIGHBOUR</p></li>
+</ol>
+<img src="image-20240529-221641.png" width="" align="" /><ol class="arabic simple" start="3">
+<li><p>Menghitung  REACHABILITY DENSITY (RD) dan LOCAL REACHABILITY DENSITY(LRD)</p></li>
+</ol>
+<img src="image-20240529-222006.png" width="" align="" /><ol class="arabic simple" start="4">
+<li><p>Menghitung  LOCAL OUTLIER FACTOR (LOF)</p></li>
+</ol>
+<img src="image-20240529-222244.png" width="" align="" /></section>
+<section id="perhitungan-local-outlier-factor-lof-menggunakan-python">
+<h3>PERHITUNGAN  LOCAL OUTLIER FACTOR (LOF) MENGGUNAKAN PYTHON<a class="headerlink" href="#perhitungan-local-outlier-factor-lof-menggunakan-python" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Baca dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/work/Raisin_Dataset.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Siapkan data untuk LOF (drop kolom &#39;Class&#39; karena fitur kategorikal)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Class&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Inisialisasi model LOF</span>
+<span class="n">lof</span> <span class="o">=</span> <span class="n">LocalOutlierFactor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">contamination</span><span class="o">=</span><span class="mf">0.040</span><span class="p">)</span>
+
+<span class="c1"># Terapkan LOF pada dataset</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">lof</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># fit_predict(x): Menerapkan model LOF pada dataset x dan mengembalikan prediksi. Hasil prediksi berupa label -1 untuk outlier dan 1 untuk inlier.</span>
+
+<span class="c1"># Skor anomali (semakin rendah, semakin besar kemungkinan outlier)</span>
+<span class="n">anomaly_scores</span> <span class="o">=</span> <span class="n">lof</span><span class="o">.</span><span class="n">negative_outlier_factor_</span> <span class="c1"># negative_outlier_factor_: Menghasilkan skor anomali untuk setiap sampel dalam dataset. Semakin rendah nilainya, semakin besar kemungkinan sampel tersebut adalah outlier.</span>
+
+<span class="c1"># Tambahkan kolom hasil prediksi dan skor anomali ke dalam dataframe</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;LOF_Prediksi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span> <span class="c1"># Menambahkan kolom LOF_Prediksi ke DataFrame df yang berisi hasil prediksi LOF (1 untuk inlier, -1 untuk outlier).</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;LOF_Skor_Anomali&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">anomaly_scores</span> <span class="c1"># Menambahkan kolom LOF_Skor_Anomali yang berisi skor anomali dari LOF.</span>
+
+<span class="c1"># Print hasil deteksi outlier</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Visualisasi hasil (opsional)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="c1"># Membuat figure baru dengan ukuran 10x6.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;LOF Anomaly Scores&quot;</span><span class="p">)</span> <span class="c1"># Memberi judul pada plot.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">anomaly_scores</span><span class="p">)),</span> <span class="n">anomaly_scores</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span> <span class="c1"># Membuat scatter plot dari skor anomali.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=-</span><span class="mf">1.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>  <span class="c1"># Menambahkan garis horizontal pada y = -1.5 untuk memisahkan outlier (opsional, dapat disesuaikan dengan konteks data).</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Indeks&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Skor Anomali LOF&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Area  MajorAxisLength  MinorAxisLength  Eccentricity  ConvexArea  \
+0    87524       442.246011       253.291155      0.819738       90546   
+1    75166       406.690687       243.032436      0.801805       78789   
+2    90856       442.267048       266.328318      0.798354       93717   
+3    45928       286.540559       208.760042      0.684989       47336   
+4    79408       352.190770       290.827533      0.564011       81463   
+..     ...              ...              ...           ...         ...   
+895  83248       430.077308       247.838695      0.817263       85839   
+896  87350       440.735698       259.293149      0.808629       90899   
+897  99657       431.706981       298.837323      0.721684      106264   
+898  93523       476.344094       254.176054      0.845739       97653   
+899  85609       512.081774       215.271976      0.907345       89197   
+
+       Extent  Perimeter    Class  LOF_Prediksi  LOF_Skor_Anomali  
+0    0.758651   1184.040  Kecimen             1         -0.995659  
+1    0.684130   1121.786  Kecimen             1         -0.977959  
+2    0.637613   1208.575  Kecimen             1         -1.034334  
+3    0.699599    844.162  Kecimen             1         -0.995727  
+4    0.792772   1073.251  Kecimen             1         -0.966973  
+..        ...        ...      ...           ...               ...  
+895  0.668793   1129.072    Besni             1         -0.995815  
+896  0.636476   1214.252    Besni             1         -0.990651  
+897  0.741099   1292.828    Besni             1         -1.124869  
+898  0.658798   1258.548    Besni             1         -1.044211  
+899  0.632020   1272.862    Besni             1         -1.002351  
+
+[900 rows x 10 columns]
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/bce7fc9858d49ef671c0102a0cd9c7090b6997ee50265a96084c78753cce6ee1.png"><img alt="_images/bce7fc9858d49ef671c0102a0cd9c7090b6997ee50265a96084c78753cce6ee1.png" src="_images/bce7fc9858d49ef671c0102a0cd9c7090b6997ee50265a96084c78753cce6ee1.png" style="width: 857px; height: 547px;" /></a>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Area</th>
+      <th>MajorAxisLength</th>
+      <th>MinorAxisLength</th>
+      <th>Eccentricity</th>
+      <th>ConvexArea</th>
+      <th>Extent</th>
+      <th>Perimeter</th>
+      <th>Class</th>
+      <th>LOF_Prediksi</th>
+      <th>LOF_Skor_Anomali</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>87524</td>
+      <td>442.246011</td>
+      <td>253.291155</td>
+      <td>0.819738</td>
+      <td>90546</td>
+      <td>0.758651</td>
+      <td>1184.040</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.995659</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>75166</td>
+      <td>406.690687</td>
+      <td>243.032436</td>
+      <td>0.801805</td>
+      <td>78789</td>
+      <td>0.684130</td>
+      <td>1121.786</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.977959</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>90856</td>
+      <td>442.267048</td>
+      <td>266.328318</td>
+      <td>0.798354</td>
+      <td>93717</td>
+      <td>0.637613</td>
+      <td>1208.575</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-1.034334</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>45928</td>
+      <td>286.540559</td>
+      <td>208.760042</td>
+      <td>0.684989</td>
+      <td>47336</td>
+      <td>0.699599</td>
+      <td>844.162</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.995727</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>79408</td>
+      <td>352.190770</td>
+      <td>290.827533</td>
+      <td>0.564011</td>
+      <td>81463</td>
+      <td>0.792772</td>
+      <td>1073.251</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.966973</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>895</th>
+      <td>83248</td>
+      <td>430.077308</td>
+      <td>247.838695</td>
+      <td>0.817263</td>
+      <td>85839</td>
+      <td>0.668793</td>
+      <td>1129.072</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-0.995815</td>
+    </tr>
+    <tr>
+      <th>896</th>
+      <td>87350</td>
+      <td>440.735698</td>
+      <td>259.293149</td>
+      <td>0.808629</td>
+      <td>90899</td>
+      <td>0.636476</td>
+      <td>1214.252</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-0.990651</td>
+    </tr>
+    <tr>
+      <th>897</th>
+      <td>99657</td>
+      <td>431.706981</td>
+      <td>298.837323</td>
+      <td>0.721684</td>
+      <td>106264</td>
+      <td>0.741099</td>
+      <td>1292.828</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-1.124869</td>
+    </tr>
+    <tr>
+      <th>898</th>
+      <td>93523</td>
+      <td>476.344094</td>
+      <td>254.176054</td>
+      <td>0.845739</td>
+      <td>97653</td>
+      <td>0.658798</td>
+      <td>1258.548</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-1.044211</td>
+    </tr>
+    <tr>
+      <th>899</th>
+      <td>85609</td>
+      <td>512.081774</td>
+      <td>215.271976</td>
+      <td>0.907345</td>
+      <td>89197</td>
+      <td>0.632020</td>
+      <td>1272.862</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-1.002351</td>
+    </tr>
+  </tbody>
+</table>
+<p>900 rows × 10 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="preprocessing-data">
+<h1>PREPROCESSING DATA<a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h1>
+<section id="penghapusan-lof">
+<h2>1. Penghapusan LOF<a class="headerlink" href="#penghapusan-lof" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hapus data yang terdeteksi sebagai outlier</span>
+<span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LOF_Prediksi&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Menghapus baris dengan prediksi LOF -1 (outlier) dan mereset indeks</span>
+<span class="n">df_cleaned</span>
+
+<span class="c1">#Dari 900 data menjadi 864</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Area</th>
+      <th>MajorAxisLength</th>
+      <th>MinorAxisLength</th>
+      <th>Eccentricity</th>
+      <th>ConvexArea</th>
+      <th>Extent</th>
+      <th>Perimeter</th>
+      <th>Class</th>
+      <th>LOF_Prediksi</th>
+      <th>LOF_Skor_Anomali</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>87524</td>
+      <td>442.246011</td>
+      <td>253.291155</td>
+      <td>0.819738</td>
+      <td>90546</td>
+      <td>0.758651</td>
+      <td>1184.040</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.995659</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>75166</td>
+      <td>406.690687</td>
+      <td>243.032436</td>
+      <td>0.801805</td>
+      <td>78789</td>
+      <td>0.684130</td>
+      <td>1121.786</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.977959</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>90856</td>
+      <td>442.267048</td>
+      <td>266.328318</td>
+      <td>0.798354</td>
+      <td>93717</td>
+      <td>0.637613</td>
+      <td>1208.575</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-1.034334</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>45928</td>
+      <td>286.540559</td>
+      <td>208.760042</td>
+      <td>0.684989</td>
+      <td>47336</td>
+      <td>0.699599</td>
+      <td>844.162</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.995727</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>79408</td>
+      <td>352.190770</td>
+      <td>290.827533</td>
+      <td>0.564011</td>
+      <td>81463</td>
+      <td>0.792772</td>
+      <td>1073.251</td>
+      <td>Kecimen</td>
+      <td>1</td>
+      <td>-0.966973</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>859</th>
+      <td>83248</td>
+      <td>430.077308</td>
+      <td>247.838695</td>
+      <td>0.817263</td>
+      <td>85839</td>
+      <td>0.668793</td>
+      <td>1129.072</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-0.995815</td>
+    </tr>
+    <tr>
+      <th>860</th>
+      <td>87350</td>
+      <td>440.735698</td>
+      <td>259.293149</td>
+      <td>0.808629</td>
+      <td>90899</td>
+      <td>0.636476</td>
+      <td>1214.252</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-0.990651</td>
+    </tr>
+    <tr>
+      <th>861</th>
+      <td>99657</td>
+      <td>431.706981</td>
+      <td>298.837323</td>
+      <td>0.721684</td>
+      <td>106264</td>
+      <td>0.741099</td>
+      <td>1292.828</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-1.124869</td>
+    </tr>
+    <tr>
+      <th>862</th>
+      <td>93523</td>
+      <td>476.344094</td>
+      <td>254.176054</td>
+      <td>0.845739</td>
+      <td>97653</td>
+      <td>0.658798</td>
+      <td>1258.548</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-1.044211</td>
+    </tr>
+    <tr>
+      <th>863</th>
+      <td>85609</td>
+      <td>512.081774</td>
+      <td>215.271976</td>
+      <td>0.907345</td>
+      <td>89197</td>
+      <td>0.632020</td>
+      <td>1272.862</td>
+      <td>Besni</td>
+      <td>1</td>
+      <td>-1.002351</td>
+    </tr>
+  </tbody>
+</table>
+<p>864 rows × 10 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOF_Prediksi&#39;</span><span class="p">,</span> <span class="s1">&#39;LOF_Skor_Anomali&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Area</th>
+      <th>MajorAxisLength</th>
+      <th>MinorAxisLength</th>
+      <th>Eccentricity</th>
+      <th>ConvexArea</th>
+      <th>Extent</th>
+      <th>Perimeter</th>
+      <th>Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>87524</td>
+      <td>442.246011</td>
+      <td>253.291155</td>
+      <td>0.819738</td>
+      <td>90546</td>
+      <td>0.758651</td>
+      <td>1184.040</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>75166</td>
+      <td>406.690687</td>
+      <td>243.032436</td>
+      <td>0.801805</td>
+      <td>78789</td>
+      <td>0.684130</td>
+      <td>1121.786</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>90856</td>
+      <td>442.267048</td>
+      <td>266.328318</td>
+      <td>0.798354</td>
+      <td>93717</td>
+      <td>0.637613</td>
+      <td>1208.575</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>45928</td>
+      <td>286.540559</td>
+      <td>208.760042</td>
+      <td>0.684989</td>
+      <td>47336</td>
+      <td>0.699599</td>
+      <td>844.162</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>79408</td>
+      <td>352.190770</td>
+      <td>290.827533</td>
+      <td>0.564011</td>
+      <td>81463</td>
+      <td>0.792772</td>
+      <td>1073.251</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>859</th>
+      <td>83248</td>
+      <td>430.077308</td>
+      <td>247.838695</td>
+      <td>0.817263</td>
+      <td>85839</td>
+      <td>0.668793</td>
+      <td>1129.072</td>
+      <td>Besni</td>
+    </tr>
+    <tr>
+      <th>860</th>
+      <td>87350</td>
+      <td>440.735698</td>
+      <td>259.293149</td>
+      <td>0.808629</td>
+      <td>90899</td>
+      <td>0.636476</td>
+      <td>1214.252</td>
+      <td>Besni</td>
+    </tr>
+    <tr>
+      <th>861</th>
+      <td>99657</td>
+      <td>431.706981</td>
+      <td>298.837323</td>
+      <td>0.721684</td>
+      <td>106264</td>
+      <td>0.741099</td>
+      <td>1292.828</td>
+      <td>Besni</td>
+    </tr>
+    <tr>
+      <th>862</th>
+      <td>93523</td>
+      <td>476.344094</td>
+      <td>254.176054</td>
+      <td>0.845739</td>
+      <td>97653</td>
+      <td>0.658798</td>
+      <td>1258.548</td>
+      <td>Besni</td>
+    </tr>
+    <tr>
+      <th>863</th>
+      <td>85609</td>
+      <td>512.081774</td>
+      <td>215.271976</td>
+      <td>0.907345</td>
+      <td>89197</td>
+      <td>0.632020</td>
+      <td>1272.862</td>
+      <td>Besni</td>
+    </tr>
+  </tbody>
+</table>
+<p>864 rows × 8 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="memisah-antar-fitur-dan-class">
+<h2>2. Memisah antar fitur dan class<a class="headerlink" href="#memisah-antar-fitur-dan-class" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Memisahkan Antara feature dan Class</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Class&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;X (berisi fitur) </span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Y (berisi fitur) </span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">x_std</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X (berisi fitur) 
+       Area  MajorAxisLength  MinorAxisLength  Eccentricity  ConvexArea  \
+0    87524       442.246011       253.291155      0.819738       90546   
+1    75166       406.690687       243.032436      0.801805       78789   
+2    90856       442.267048       266.328318      0.798354       93717   
+3    45928       286.540559       208.760042      0.684989       47336   
+4    79408       352.190770       290.827533      0.564011       81463   
+..     ...              ...              ...           ...         ...   
+859  83248       430.077308       247.838695      0.817263       85839   
+860  87350       440.735698       259.293149      0.808629       90899   
+861  99657       431.706981       298.837323      0.721684      106264   
+862  93523       476.344094       254.176054      0.845739       97653   
+863  85609       512.081774       215.271976      0.907345       89197   
+
+       Extent  Perimeter  
+0    0.758651   1184.040  
+1    0.684130   1121.786  
+2    0.637613   1208.575  
+3    0.699599    844.162  
+4    0.792772   1073.251  
+..        ...        ...  
+859  0.668793   1129.072  
+860  0.636476   1214.252  
+861  0.741099   1292.828  
+862  0.658798   1258.548  
+863  0.632020   1272.862  
+
+[864 rows x 7 columns]
+Y (berisi fitur) 
+ 0      Kecimen
+1      Kecimen
+2      Kecimen
+3      Kecimen
+4      Kecimen
+        ...   
+859      Besni
+860      Besni
+861      Besni
+862      Besni
+863      Besni
+Name: Class, Length: 864, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="normalisasi-data">
+<h2>3. Normalisasi Data<a class="headerlink" href="#normalisasi-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_std</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_std</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span><span class="s1">&#39;MajorAxisLength&#39;</span><span class="p">,</span><span class="s1">&#39;MinorAxisLength&#39;</span><span class="p">,</span><span class="s1">&#39;Eccentricity&#39;</span><span class="p">,</span><span class="s1">&#39;ConvexArea&#39;</span><span class="p">,</span><span class="s1">&#39;Extent&#39;</span><span class="p">,</span><span class="s1">&#39;Perimeter&#39;</span><span class="p">]])</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>area</th>
+      <th>MajorAxisLength</th>
+      <th>MinorAxisLength</th>
+      <th>Eccentricity</th>
+      <th>ConvexArea</th>
+      <th>Extent</th>
+      <th>Perimeter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.293761</td>
+      <td>0.274321</td>
+      <td>0.328517</td>
+      <td>0.767872</td>
+      <td>0.282897</td>
+      <td>0.831422</td>
+      <td>0.286660</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.221476</td>
+      <td>0.227835</td>
+      <td>0.291720</td>
+      <td>0.738636</td>
+      <td>0.218529</td>
+      <td>0.667854</td>
+      <td>0.246997</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.313251</td>
+      <td>0.274348</td>
+      <td>0.375279</td>
+      <td>0.733009</td>
+      <td>0.300258</td>
+      <td>0.565754</td>
+      <td>0.302291</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.050456</td>
+      <td>0.070748</td>
+      <td>0.168790</td>
+      <td>0.548194</td>
+      <td>0.046328</td>
+      <td>0.701809</td>
+      <td>0.070120</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.246289</td>
+      <td>0.156581</td>
+      <td>0.463155</td>
+      <td>0.350968</td>
+      <td>0.233169</td>
+      <td>0.906315</td>
+      <td>0.216075</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>859</th>
+      <td>0.268750</td>
+      <td>0.258411</td>
+      <td>0.308960</td>
+      <td>0.763836</td>
+      <td>0.257127</td>
+      <td>0.634192</td>
+      <td>0.251639</td>
+    </tr>
+    <tr>
+      <th>860</th>
+      <td>0.292743</td>
+      <td>0.272346</td>
+      <td>0.350045</td>
+      <td>0.749761</td>
+      <td>0.284830</td>
+      <td>0.563259</td>
+      <td>0.305908</td>
+    </tr>
+    <tr>
+      <th>861</th>
+      <td>0.364730</td>
+      <td>0.260542</td>
+      <td>0.491885</td>
+      <td>0.608017</td>
+      <td>0.368951</td>
+      <td>0.792897</td>
+      <td>0.355970</td>
+    </tr>
+    <tr>
+      <th>862</th>
+      <td>0.328851</td>
+      <td>0.318901</td>
+      <td>0.331691</td>
+      <td>0.810259</td>
+      <td>0.321807</td>
+      <td>0.612254</td>
+      <td>0.334130</td>
+    </tr>
+    <tr>
+      <th>863</th>
+      <td>0.282560</td>
+      <td>0.365626</td>
+      <td>0.192147</td>
+      <td>0.910695</td>
+      <td>0.275511</td>
+      <td>0.553478</td>
+      <td>0.343249</td>
+    </tr>
+  </tbody>
+</table>
+<p>864 rows × 7 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="modelling-data">
+<h1>MODELLING DATA<a class="headerlink" href="#modelling-data" title="Link to this heading">#</a></h1>
+<section id="perhitungan-naive-bayes">
+<h2>1. Perhitungan Naive bayes<a class="headerlink" href="#perhitungan-naive-bayes" title="Link to this heading">#</a></h2>
+<p>Naive Bayes, atau kadang disebut Naïve Bayes Classifier, adalah algoritma machine learning probabilistik yang digunakan dalam berbagai macam tugas klasifikasi. Naive Bayes Classifier adalah sebuah algoritma klasifikasi yang didasarkan pada teorema Bayes dengan asumsi sederhana (naive) bahwa setiap fitur dalam dataset adalah independen satu sama lain</p>
+<ul class="simple">
+<li><p>Rumus Naive Bayes Gaussian</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P(H|A) = \frac{P(A|H) \cdot P(H)}{P(A)}\]</div>
+<section id="a-memecah-antara-data-testing-dan-data-training">
+<h3>a. Memecah antara data testing dan data training<a class="headerlink" href="#a-memecah-antara-data-testing-dan-data-training" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="p">,</span>  
+                          <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+                          <span class="n">train_size</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X_train</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">X_train</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> X_test</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> y_train</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> y_test</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X_train
+          area MajorAxisLength MinorAxisLength Eccentricity ConvexArea  \
+245  0.048525        0.035913        0.229394     0.240283   0.045945   
+379  0.083276        0.128545        0.140805     0.726324   0.077666   
+6    0.030358        0.101611        0.051755     0.773350   0.027539   
+652  0.431406        0.369068        0.416711     0.803754   0.416752   
+702  0.251354        0.224713        0.338457     0.693095   0.249922   
+..        ...             ...             ...          ...        ...   
+835  0.235842        0.297720        0.232712     0.850400   0.241529   
+192  0.288035        0.153884        0.552439     0.136254   0.266286   
+629  0.357752        0.334422        0.358765     0.807693   0.345480   
+559  0.990969        0.628928        0.760201     0.820313   0.937515   
+684  0.976381        0.543595        0.862932     0.709801   0.921551   
+
+       Extent Perimeter  
+245  0.793309  0.050443  
+379  0.758464  0.101897  
+6    0.627828  0.057145  
+652  0.638566  0.405719  
+702  0.622667  0.267278  
+..        ...       ...  
+835  0.595606  0.300104  
+192  0.891203  0.214043  
+629  0.657544  0.334462  
+559  0.879547  0.721201  
+684  0.865086  0.631096  
+
+[518 rows x 7 columns] 
+ X_test
+          area MajorAxisLength MinorAxisLength Eccentricity ConvexArea  \
+55   0.115961        0.103570        0.275972     0.479966   0.115350   
+316  0.228735        0.184366        0.368629     0.582457   0.220155   
+252  0.211725        0.148553        0.408227     0.417919   0.205203   
+262  0.146810        0.211763        0.148627     0.828869   0.141514   
+31   0.222430        0.172322        0.373624     0.545784   0.211696   
+..        ...             ...             ...          ...        ...   
+787  0.294574        0.226511        0.415189     0.620838   0.278320   
+580  0.539248        0.346938        0.637831     0.623672   0.534790   
+668  0.070595        0.115335        0.138249     0.704743   0.075652   
+765  0.230496        0.294976        0.195981     0.868447   0.218009   
+15   0.160082        0.223120        0.160628     0.831601   0.150805   
+
+       Extent Perimeter  
+55   0.688697  0.138840  
+316  0.771283  0.217000  
+252  0.771271  0.201269  
+262  0.790672  0.172177  
+31   0.753347  0.217694  
+..        ...       ...  
+787  0.798581  0.250012  
+580  0.587521  0.454630  
+668  0.648084  0.119112  
+765  0.611364  0.255849  
+15   0.827300  0.187529  
+
+[346 rows x 7 columns] 
+ y_train
+ 245    Kecimen
+379    Kecimen
+6      Kecimen
+652      Besni
+702      Besni
+        ...   
+835      Besni
+192    Kecimen
+629      Besni
+559      Besni
+684      Besni
+Name: Class, Length: 518, dtype: object 
+ y_test
+ 55     Kecimen
+316    Kecimen
+252    Kecimen
+262    Kecimen
+31     Kecimen
+        ...   
+787      Besni
+580      Besni
+668      Besni
+765      Besni
+15     Kecimen
+Name: Class, Length: 346, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="b-convert-data-training-untuk-perhitungan-manual">
+<h3>b. Convert data training untuk perhitungan manual<a class="headerlink" href="#b-convert-data-training-untuk-perhitungan-manual" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> 
+<span class="n">joined</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+<span class="n">joined</span>
+
+<span class="n">df_X_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span>
+<span class="n">df_X_train</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;Trainingdata_raisin.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="c-memeriksa-hasil-prediksi-class-antara-data-asli-dan-data-testing">
+<h3>c. Memeriksa hasil prediksi class antara data asli dan data testing<a class="headerlink" href="#c-memeriksa-hasil-prediksi-class-antara-data-asli-dan-data-testing" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prediksi kategori menggunakan naive baise</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">df_pred</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;class predict&quot;</span><span class="p">])</span>
+<span class="n">df_testing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
+
+
+<span class="n">df_testing</span> <span class="o">=</span> <span class="n">df_testing</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df_testing</span> <span class="o">=</span> <span class="n">df_testing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span>
+<span class="n">df_testing</span> <span class="o">=</span> <span class="n">df_testing</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;class testing&#39;</span><span class="p">})</span>
+
+<span class="n">df_testing</span><span class="p">[</span><span class="s2">&quot;class pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pred</span>
+<span class="n">df_testing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Class</th>
+      <th>class pred</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Kecimen</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kecimen</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kecimen</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Kecimen</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Kecimen</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>341</th>
+      <td>Besni</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>Besni</td>
+      <td>Besni</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>Besni</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>344</th>
+      <td>Besni</td>
+      <td>Kecimen</td>
+    </tr>
+    <tr>
+      <th>345</th>
+      <td>Kecimen</td>
+      <td>Kecimen</td>
+    </tr>
+  </tbody>
+</table>
+<p>346 rows × 2 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="d-menghitung-data-akurasi-dari-data-testing">
+<h3>d. Menghitung data akurasi dari data testing<a class="headerlink" href="#d-menghitung-data-akurasi-dari-data-testing" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span><span class="n">ConfusionMatrixDisplay</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">c_matrix</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AKURASI :&quot;</span><span class="p">,</span>  <span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">),</span><span class="s2">&quot;%&quot;</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Confusion Matrix : </span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">c_matrix</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">c_matrix</span><span class="p">,</span> <span class="n">display_labels</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
+<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AKURASI : 86.705 %
+
+Confusion Matrix : 
+ [[136  36]
+ [ 10 164]]
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/cc63614951352ab47d12f171d18483e2c8b35dd074fae12cdc612d44ed87f820.png"><img alt="_images/cc63614951352ab47d12f171d18483e2c8b35dd074fae12cdc612d44ed87f820.png" src="_images/cc63614951352ab47d12f171d18483e2c8b35dd074fae12cdc612d44ed87f820.png" style="width: 557px; height: 432px;" /></a>
+</div>
+</div>
+</section>
+<section id="perhitungan-manual-naive-bayes-menggunakan-excel">
+<h3>PERHITUNGAN MANUAL NAIVE BAYES MENGGUNAKAN EXCEL<a class="headerlink" href="#perhitungan-manual-naive-bayes-menggunakan-excel" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Persiapkan Data</p></li>
+</ol>
+<p>Data yang dipakai menggunakan dataset Raisin, yaitu 60% untuk melatih model Naive Bayes. Dengan menggunakan sebagian besar data ini, model dapat belajar dari variasi yang luas dalam fitur-fitur. Berikut datanya</p>
+<p>A. DATA KECIMEN</p>
+<img src="KECIMEN.jpg" width="" align="" /><img src="KECIMEN 2.jpg" width="" align="" /><img src="KECIMEN 3.jpg" width="" align="" /><img src="KECIMEN 5.jpg" width="" align="" /><img src="KECIMEN 6.jpg" width="" align="" /><img src="KECIMEN 7.jpg" width="" align="" /><img src="KECIMEN 8.jpg" width="" align="" /><img src="KECIMEN 9.jpg" width="" align="" /><p>B. DATA BESNI</p>
+<img src="BESNI 1.jpg" width="" align="" /><img src="BESNI 2.jpg" width="" align="" /><img src="BESNI 3.jpg" width="" align="" /><img src="BESNI 4.jpg" width="" align="" /><img src="BESNI 5.jpg" width="" align="" /><img src="BESNI 6.jpg" width="" align="" /><img src="BESNI 7.jpg" width="" align="" /><img src="BESNI 8.jpg" width="" align="" /><img src="BESNI 9.jpg" width="" align="" /><ol class="arabic simple" start="2">
+<li><p>Menghitung Probabilitas Setiap Kelas / Variety</p></li>
+</ol>
+<p>Setelah itu hitung jumlah kemunculan fitur dalam setiap kelas dan bagi dengan jumlah total contoh dalam kelas.</p>
+<img src="probabilitas.png" width="" align="" /><ol class="arabic simple" start="3">
+<li><p>Menghitung MEAN dari Fitur Setiap Kelas</p></li>
+</ol>
+<p>Untuk setiap fitur, hitung rata-rata dari nilai fitur untuk setiap kelas.</p>
+<img src="mean.png" width="" align="" /><ol class="arabic simple" start="4">
+<li><p>Menghitung VARIAN dari Fitur Setiap Kelas</p></li>
+</ol>
+<p>Untuk setiap fitur, hitung VAR dari nilai fitur untuk setiap kelas.</p>
+<img src="variasi.png" width="" align="" /><ol class="arabic simple" start="5">
+<li><p>Hitung Probabilitas Tiap Kelas Dengan Inputan</p></li>
+</ol>
+<p>Untuk perhitungan ini menggunakan rumus Gaussian Naive Bayes yaitu</p>
+<img src="inputan.png" width="" align="" /><ol class="arabic simple" start="6">
+<li><p>Klasifikasi Hasil Akhir dan Perankingan</p></li>
+</ol>
+<img src="hasilakhir.png" width="" align="" /><p>Untuk tahap terakhir yaitu pengklasifikasian dengan cara mengalikan probabilitas prior kelas / variety tersebut dengan nilai probabilitas dari masing-masing fitur. Lalu urutkan berdasarkan yang paling tinggi, maka itu adalah hasil akhirnya. Pada hasil diatas yang tertinggi adalah kelas BESNI dengan nilai probabilitas sebesar 8,7561515568</p>
+</section>
+<section id="perhitungan-naive-bayes-menggunakan-python">
+<h3>PERHITUNGAN  NAIVE BAYES MENGGUNAKAN PYTHON<a class="headerlink" href="#perhitungan-naive-bayes-menggunakan-python" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.37035445</span><span class="p">,</span> <span class="mf">0.34154145</span><span class="p">,</span> <span class="mf">0.21107995</span><span class="p">,</span> <span class="mf">0.67864312</span><span class="p">,</span> <span class="mf">0.47502234</span><span class="p">,</span> <span class="mf">0.47428234</span><span class="p">,</span> <span class="mf">0.61548421</span><span class="p">]])</span>
+<span class="n">sample_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+<span class="n">sample_pred</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Besni&#39;], dtype=&#39;&lt;U7&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<a style='text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;' href='https://deepnote.com?utm_source=created-in-deepnote-cell&projectId=6bead952-67ac-41df-b703-fa12af55157a' target="_blank">
+<img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
+Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Markdown Files</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="markdown-notebooks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UTS-Klasifikasi dataset “Raisin”</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data">MEMAHAMI DATA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-cara-memperoleh-data-bagaimana-data-didapat">1. Memahami cara memperoleh data (bagaimana data didapat)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data">2. Eksplorasi data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipe-data-pada-setiap-kolom">3. Tipe data pada setiap kolom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-kualitas-data">4. Identifikasi kualitas data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pemeriksaan-missing-values">a. Pemeriksaan Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-pemeriksaan-local-outlier-factor-lof">b. Pemeriksaan LOCAL OUTLIER FACTOR (LOF)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-local-outlier-factor-lof-menggunakan-excel">PERHITUNGAN MANUAL LOCAL OUTLIER FACTOR (LOF) MENGGUNAKAN EXCEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-local-outlier-factor-lof-menggunakan-python">PERHITUNGAN  LOCAL OUTLIER FACTOR (LOF) MENGGUNAKAN PYTHON</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">PREPROCESSING DATA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penghapusan-lof">1. Penghapusan LOF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memisah-antar-fitur-dan-class">2. Memisah antar fitur dan class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">3. Normalisasi Data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-data">MODELLING DATA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-naive-bayes">1. Perhitungan Naive bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-memecah-antara-data-testing-dan-data-training">a. Memecah antara data testing dan data training</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-convert-data-training-untuk-perhitungan-manual">b. Convert data training untuk perhitungan manual</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-memeriksa-hasil-prediksi-class-antara-data-asli-dan-data-testing">c. Memeriksa hasil prediksi class antara data asli dan data testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-menghitung-data-akurasi-dari-data-testing">d. Menghitung data akurasi dari data testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-naive-bayes-menggunakan-excel">PERHITUNGAN MANUAL NAIVE BAYES MENGGUNAKAN EXCEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-naive-bayes-menggunakan-python">PERHITUNGAN  NAIVE BAYES MENGGUNAKAN PYTHON</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
